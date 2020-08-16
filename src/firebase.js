@@ -1,3 +1,8 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+import 'firebase/functions';
+
 const firebaseConfig = {
     apiKey: "AIzaSyC-_4P_crefiiBYEiVkem_mGw0PALu2Tdo",
     authDomain: "tik-tok-clone-e8ef5.firebaseapp.com",
@@ -8,3 +13,10 @@ const firebaseConfig = {
     appId: "1:564597002338:web:baef8ab0bbc9775bd8813b",
     measurementId: "G-DDRNJLXC0X"
   };
+
+  const firebaseApp =
+  firebase.initializeApp(firebaseConfig);
+
+  const db = firebaseApp.firestore();
+
+  export default db;
